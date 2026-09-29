@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/usuarios.css">
+</head>
+<script src="./datos/comicsUsuarios.js"></script>
+<script src="./datos/usuarios.js"></script>
+<script src="./datos/listaComics.js"></script>
+<script src="./datos/comamndosusuarios.js"></script>
+
+<body>
+    <h1 id="titulo"></h1>
+  <p>Elige la editorial<select id="editorial">
+        <option value="Marvel Comics">Marvel Comics</option>
+        <option value="DC Comics">DC Comics</option>
+        <option value="Image Comics">Image Comics</option>
+        <option value="Archie Comics">Archie Comics</option>
+        <option value="Dynamite Entertainment">Dynamite Entertainment</option>
+        <option value="IDW Publishing">IDW Publishing</option>
+    </select>
+        Elige el formato<select id="formato">
+        <option value="fisico">Fisico</option>
+        <option value="digital">Digital</option>
+        <option value="tapa blanda">Tapa blanda</option>
+        <option value="tapa dura">Tapa dura</option>
+    </select>
+        Elige si es original<select id="original">
+        <option value="si">Si</option>
+        <option value="no">No</option>
+    </select>
+elige el precio maximo<input type="number" id="precio" step="any"  min="1.00" max="100.00">
+</p>
+    <p><button type="submit" onclick="llamar()">Ver resultados</button></p>
+    <div id="crearTabla">
+    </div>
+    <button type="submit" onclick="verificar()">Verificar añadidos</button>
+</body>
+
+</html>

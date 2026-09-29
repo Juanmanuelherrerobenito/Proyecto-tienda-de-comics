@@ -1,0 +1,44 @@
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --bg-main: #0b0b0b;
+  --bg-card: #141414;
+  --accent: #00c8ff;
+  --accent-soft: rgba(0, 200, 255, 0.3);
+  --text-main: #f2f2f2;
+}
+
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #1a1a1a, #050505);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--text-main);
+}
+
+/* =========================
+   CARRUSEL HOST
+========================= */
+carrusel-d {
+  display: block;
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: 16px;
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.85),
+    0 0 20px var(--accent-soft);
+}

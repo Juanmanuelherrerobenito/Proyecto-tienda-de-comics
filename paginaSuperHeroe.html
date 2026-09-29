@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/pagHeroe.css" />
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./datos/listaComics.js"></script>
+  <script src="./datos/login.js"></script>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand">Elige tu categoria</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDarkDropdown"
+          aria-controls="navbarNavDarkDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDarkDropdownMenuLinkMarvel"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Marvel
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="navbarDarkDropdownMenuLinkMarvel"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Avengers"
+                    >Avengers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Captain America"
+                    >Captain America</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Doctor Strange"
+                    >Doctor Strange</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Fantastic Four"
+                    >Fantastic Four</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Hulk"
+                    >Hulk</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Iron Man"
+                    >Iron Man</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Spider-Man"
+                    >Spider Man</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Thor"
+                    >Thor</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Wolverine"
+                    >Wolverine</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=X-Men"
+                    >X-Men</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDarkDropdownMenuLinkDc"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                DC
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="navbarDarkDropdownMenuLinkDc"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Aquaman"
+                    >Aquaman</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Batman"
+                    >Batman</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Flash"
+                    >Flash</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Green Arrow"
+                    >Green Arrow</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Green Lantern"
+                    >Green Lantern</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Justice League"
+                    >Justice League</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Shazam"
+                    >Shazam</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Superman"
+                    >Superman</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Teen Titans"
+                    >Teen Titans</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Wonder Woman"
+                    >Wonder Woman</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDarkDropdownMenuLinkOtros"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Otros
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="navbarDarkDropdownMenuLinkOtros"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Sonic"
+                    >Archie Sonic</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Invencible"
+                    >Invencible</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Spawn"
+                    >Spawn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=The Boys"
+                    >The Boys</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="./paginaSuperHeroe.html?id=Teenage Mutant Ninja Turtles"
+                    >Teenage Mutant Ninja Turtles</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-buttons">
+          <button type="button" onclick="llevarIngresar()">Ingresar</button>
+          <button type="button" onclick="llevarRegistrar()">Registrarse</button>
+          <button type="button" onclick="llevarInicio()">Inicio</button>
+        </div>
+      </div>
+    </nav>
+    <div id="imagen"></div>
+    <div id="crearTabla"></div>
+    <div id="crearBotones"></div>
+  </body>
+</html>

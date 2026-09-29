@@ -1,0 +1,162 @@
+/* =========================
+   VARIABLES DE COLOR
+========================= */
+      :root {
+        --bg-main: #121212;
+        --bg-secondary: #1e1e1e;
+        --accent: #00c8ff;
+        --accent-hover: #00a3cc;
+        --text-main: #f0f0f0;
+        --text-muted: #b5b5b5;
+      }
+
+      /* =========================
+   ESTILOS GENERALES
+========================= */
+      body {
+        background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+        color: var(--text-main);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding-top: 80px;
+      }
+
+      /* =========================
+   NAVBAR
+========================= */
+      .navbar {
+        background: rgba(20, 20, 20, 0.95) !important;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+      }
+
+      .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--accent) !important;
+      }
+
+      .navbar-dark .navbar-nav .nav-link {
+        color: var(--text-main);
+        font-weight: 500;
+        padding: 8px 14px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+      }
+
+      .navbar-dark .navbar-nav .nav-link:hover {
+        background-color: rgba(0, 200, 255, 0.15);
+        color: var(--accent);
+      }
+
+      /* =========================
+   DROPDOWN
+========================= */
+      .dropdown-menu-dark {
+        background-color: var(--bg-secondary);
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+      }
+
+      .dropdown-item {
+        color: var(--text-muted);
+        border-radius: 6px;
+        padding: 8px 12px;
+        transition: all 0.25s ease;
+      }
+
+      .dropdown-item:hover {
+        background-color: rgba(0, 200, 255, 0.15);
+        color: var(--accent);
+        transform: translateX(5px);
+      }
+
+      /* =========================
+   BOTONES NAVBAR
+========================= */
+      .navbar button {
+        margin-left: 10px;
+        background: linear-gradient(135deg, var(--accent), #009ad1);
+        color: #000;
+        border: none;
+        padding: 7px 14px;
+        border-radius: 20px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .navbar button:hover {
+        background: linear-gradient(135deg, var(--accent-hover), var(--accent));
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 200, 255, 0.4);
+      }
+
+      /* =========================
+   CARRUSEL
+========================= */
+      .carousel {
+        border-radius: 15px;
+        overflow: hidden;
+        border: 3px solid var(--accent);
+        background-color: #000;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+      }
+
+      .carousel-inner img {
+        height: 500px;
+        width: 100%;
+        object-fit: contain;
+        padding: 15px;
+        background: radial-gradient(circle, #111, #000);
+        transition: transform 0.5s ease;
+      }
+
+      .carousel-inner img:hover {
+        transform: scale(1.05);
+      }
+
+      /* =========================
+   INDICADORES
+========================= */
+      .carousel-indicators [data-bs-target] {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: var(--accent);
+        opacity: 0.5;
+        transition: opacity 0.3s;
+      }
+
+      .carousel-indicators .active {
+        opacity: 1;
+      }
+
+      /* =========================
+   CONTROLES
+========================= */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-color: var(--accent);
+        border-radius: 50%;
+        padding: 15px;
+      }
+
+      /* =========================
+   RESPONSIVE
+========================= */
+      @media (max-width: 768px) {
+        .navbar-brand {
+          font-size: 1.2rem;
+        }
+
+        .carousel-inner img {
+          height: 300px;
+        }
+
+        .navbar button {
+          padding: 5px 12px;
+          font-size: 0.85rem;
+        }
+      }

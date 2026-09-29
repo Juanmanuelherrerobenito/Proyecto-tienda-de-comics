@@ -1,0 +1,199 @@
+/* ===========================
+   VARIABLES
+=========================== */
+:root {
+  --bg-main: #121212;
+  --bg-card: #1f1f1f;
+  --bg-hover: #292929;
+  --accent: #00c8ff;
+  --accent-dark: #00a3cc;
+  --text-main: #f0f0f0;
+  --border-soft: #333;
+}
+
+/* ===========================
+   RESET
+=========================== */
+* {
+  box-sizing: border-box;
+}
+
+/* ===========================
+   BODY
+=========================== */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  margin: 0;
+}
+
+/* ===========================
+   TITULO
+=========================== */
+h1#titulo {
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 25px;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+/* ===========================
+   FORMULARIO
+=========================== */
+p {
+  max-width: 1100px;
+  margin: 0 auto 15px;
+  line-height: 2;
+  text-align: center;
+}
+
+/* inputs juntos pero fluidos */
+select,
+input[type="number"] {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 7px 12px;
+  margin: 6px;
+  font-size: 0.95rem;
+  min-width: 160px;
+  transition: all 0.25s ease;
+}
+
+select:hover,
+input[type="number"]:hover {
+  background-color: var(--bg-hover);
+  border-color: var(--accent-dark);
+}
+
+select:focus,
+input[type="number"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 200, 255, 0.35);
+}
+
+/* ===========================
+   BOTONES
+=========================== */
+button {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #000;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(0, 200, 255, 0.35);
+}
+
+/* ===========================
+   CONTENEDOR TABLA
+=========================== */
+#crearTabla {
+  margin-top: 35px;
+  max-width: 1200px;
+  margin-inline: auto;
+  overflow-x: auto;
+  padding: 15px;
+  background: linear-gradient(180deg, #181818, #141414);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+/* ===========================
+   TABLA
+=========================== */
+table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+th {
+  background-color: #202020;
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+td {
+  background-color: #2a2a2a;
+  color: var(--text-main);
+}
+
+tr:hover td {
+  background-color: #333;
+}
+
+/* ===========================
+   IMÁGENES
+=========================== */
+td img {
+  width: 100px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+td img:hover {
+  transform: scale(1.05);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+  p {
+    line-height: 2.5;
+  }
+
+  select,
+  input[type="number"] {
+    min-width: 130px;
+    font-size: 0.85rem;
+  }
+
+  button {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  td img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  select,
+  input[type="number"] {
+    min-width: 110px;
+  }
+
+  td img {
+    width: 65px;
+  }
+}

@@ -1,0 +1,289 @@
+/* =========================
+   VARIABLES GLOBALES
+========================= */
+:root {
+  --bg-main: #0b0b0b;
+  --bg-card: #161616;
+  --bg-hover: #1f1f1f;
+  --accent: #00d4ff;
+  --accent-dark: #009ec2;
+  --text-main: #f5f5f5;
+  --text-muted: #bdbdbd;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  background: radial-gradient(circle at top, #121212, #080808);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 90px;
+  overflow-x: hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  background: rgba(10, 10, 10, 0.96) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.85);
+}
+
+.navbar-brand {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent) !important;
+}
+
+.navbar-nav {
+  gap: 6px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--text-main);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  background-color: rgba(0, 212, 255, 0.15);
+  color: var(--accent);
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+.dropdown-menu-dark {
+  background-color: var(--bg-card);
+  border-radius: 14px;
+  padding: 10px;
+  border: none;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.8);
+}
+
+.dropdown-item {
+  color: var(--text-muted);
+  border-radius: 10px;
+  padding: 10px 16px;
+  transition: all 0.25s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(0, 212, 255, 0.15);
+  color: var(--accent);
+  transform: translateX(5px);
+}
+
+/* =========================
+   BOTONES NAVBAR
+========================= */
+.navbar button {
+  margin-left: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #000;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 22px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 212, 255, 0.4);
+}
+
+/* =========================
+   IMAGEN PRINCIPAL
+========================= */
+#imagen {
+  display: flex;
+  justify-content: center;
+}
+
+#imagen img {
+  width: clamp(220px, 30vw, 340px);
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  margin: 40px 0 25px;
+  border-radius: 16px;
+  border: 2px solid var(--accent);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.85);
+  transition: transform 0.4s ease;
+}
+
+#imagen img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   TEXTO / DESCRIPCIÓN
+========================= */
+p {
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  max-width: 900px;
+  margin: 20px auto 50px;
+  padding: 0 20px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+/* =========================
+   CONTENEDORES
+========================= */
+#crearTabla,
+#crearBotones {
+  max-width: 95%;
+  margin: 30px auto;
+  padding: 25px;
+  background: linear-gradient(180deg, #151515, #101010);
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.85);
+}
+
+/* =========================
+   TABLAS
+========================= */
+#crearTabla {
+  overflow-x: auto;
+}
+
+#crearTabla table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+#crearTabla th,
+#crearTabla td {
+  padding: 14px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#crearTabla th {
+  background-color: #202020;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+#crearTabla td {
+  background-color: #2a2a2a;
+  color: var(--text-main);
+}
+
+/* =========================
+   BOTONES DE ACCIÓN
+========================= */
+#crearBotones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+#crearBotones button {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #000;
+  border: none;
+  padding: 10px 26px;
+  border-radius: 26px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+#crearBotones button:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 212, 255, 0.4);
+}
+/* =========================
+   BOTONES NAVBAR
+========================= */
+.nav-buttons {
+  display: flex;
+  gap: 8px;
+  margin-left: 12px;
+}
+
+.nav-buttons button {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #000;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.nav-buttons button:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 212, 255, 0.4);
+}
+
+/* =========================
+   RESPONSIVE BOTONES
+========================= */
+@media (max-width: 768px) {
+  .nav-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-buttons button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-buttons button {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-dark);
+  border-radius: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .navbar button {
+    margin-top: 8px;
+    width: 100%;
+  }
+}

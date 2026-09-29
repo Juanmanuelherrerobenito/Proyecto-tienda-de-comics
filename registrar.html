@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="./css/registar.css" />
+</head>
+<script src="./jquery/jquery.min.js"></script>
+<script src="./datos/usuarios.js"></script>
+<script>
+    $(document).ready(() => {
+        $("#botonRegistrar").click(function () {
+            registrarUsuario();
+        })
+    });
+    function registrarUsuario() {
+        //leemos los valores con jquery
+        let codigo_usuario = nuevoCodigo()
+        let nombre_usuario = $("#nombre_usuario").val();
+        let contraseña = $("#contraseña").val();
+        let correo = $("#correo").val();
+        let telefono = "+" + $("#telefono").val();
+        let perfil = "inactivo";
+        let estado = "invitado";
+        let numero_accesos_erroneos = 0;
+        let fecha_ultimo_acceso = new Date().toLocaleString();
+        if (verificarDatos(nombre_usuario, contraseña,
+            correo, telefono)) {
+            let nuevoUsuario = new Usuario(codigo_usuario, nombre_usuario, contraseña,
+                correo, telefono, perfil, estado, numero_accesos_erroneos, fecha_ultimo_acceso);
+            window.listaUsuarios.push(nuevoUsuario);
+            alert("Resistro compretado");
+            location.href = "./inicio.html";
+        } else {
+            alert("Uno de los datos no ha sido valido")
+            location.href = "./registrar.html";
+        }
+    }
+
+    function nuevoCodigo() {
+        let longitud = window.listaUsuarios.length;
+        let codigo = ""
+        if (longitud >= 99) {
+            codigo = "U" + (longitud + 1);
+        } else {
+            codigo = "U0" + (longitud + 1);
+        }
+        return codigo;
+    }
+
+    function verificarDatos(nombre, contraseña,
+        correo, telefono) {
+        let verificar = true;
+        let comparar;
+        if (nombre == "" && contraseña == "" && correo == "" && telefono == "") {
+            verificar = false;
+        }
+        comparar = "^[A-Za-zÁÉÍÓÚáéíóúÑñ]+([ -]?[A-Za-zÁÉÍÓÚáéíóúÑñ]*)*$";
+        comparar = new RegExp(comparar);
+        if (nombre.length > 24 || !comparar.test(nombre)) {
+            alert("uno");
+            verificar = false;
+        }
+
+        comparar = "^[A-Za-z0-9ÁÉÍÓÚáéíóúÑñ@]+$";
+        comparar = new RegExp(comparar);
+        if (contraseña.length > 12 || !comparar.test(contraseña)) {
+            alert("dos");
+            verificar = false;
+        }
+
+        comparar= "^[A-Za-zÁÉÍÓÚáéíóúÑñ]+@[a-z]+\.com$";
+        comparar = new RegExp(comparar);
+        if (correo.length > 24 || !comparar.test(correo)) {
+            alert("tres");
+            verificar = false;
+        }
+
+        comparar = "^\\+[0-9]+$";
+        comparar = new RegExp(comparar);
+        if (telefono.length < 7 || telefono.length > 16 || !comparar.test(telefono)) {
+            alert("cuatro");
+            verificar = false;
+        }
+
+
+        return verificar;
+    }
+
+</script>
+
+<body>
+    <div class="container">
+        <h2>Registrar Usuario</h2>
+        <form action="#" method="POST">
+            <label for="nombre_usuario">Nombre Usuario</label>
+            <input type="text" id="nombre_usuario" name="nombre_usuario" required />
+
+            <label for="contraseña">Contraseña</label>
+            <input type="password" id="contraseña" name="contraseña" pattern="[a-zA-Z]+@example.com" required />
+
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" required />
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{7,15}" placeholder="Solo números" required />
+
+
+            <button type="button" id="botonRegistrar" class="btn-submit">Registrar</button>
+        </form>
+    </div>
+</body>
+
+</html>
